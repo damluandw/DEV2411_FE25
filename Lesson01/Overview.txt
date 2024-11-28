@@ -1,1 +1,33 @@
-HTML
+Một số câu lệnh trong git
+-Set ban đầu
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
+-  1 số câu lệnh trong git xử hằng ngày
+git init,
+-- đẩy dữ liệu lên github.com
+	+ git add .
+	+ git commit -m "nội dung"
+	+ git push
+-- lấy dữ liệu từ github.com xuống
+	+ git clone đường_link - lấy dữ liệu lần đầu
+	+ git pull - cập nhật dữ thay đổi
+
+
+-----------------------------------------------------------------
+---------------FONT END---------------
+- HTML - 3 buổi
+- CSS - 2 buổi
+- Javacript - 4 buổi
+	+ Ngôn ngữ - 1 buổi
+	+ Tương tác của Javacript với HTML/CSS
+		++ DOM - 1 buổi
+		++ Jquery - 1 buổi 
+- Bootstrap/Slick - 2 buổi
+- Rengular Exeption
+- Photoshop - 1 buổi
+- 1 buổi - ôn tập 
+=> Dự án về  FONT END  -> 2-4 tuần để làm dự án -> báo cáo
+
+
+

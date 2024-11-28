@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+    </head>
+    <body>
+        <table border="1" width="500" align="center" cellspacing="0"
+            cellpadding="10">
+            <thead>
+                <tr>
+                    <th align="left">STT</th>
+                    <th>MSV</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Khoa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="center">1</td>
+                    <td align="right">SV01</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>12/12/2003</td>
+                    <td rowspan="2">CNTT</td>
+                </tr>
+                <tr>
+                    <td align="center">2</td>
+                    <td align="right">SV02</td>
+                    <td>Nguyễn Văn B</td>
+                    <td>18/12/2003</td>
+                    <!-- <td>CNTT</td> -->
+                </tr>
+                <tr>
+                    <td align="center">3</td>
+                    <td align="right">SV03</td>
+                    <td>Nguyễn Văn C</td>
+                    <td>12/07/2003</td>
+                    <td>Anh học</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Tổng SV</td>
+                    <td colspan="2">3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <br />
+        <br />
+        <br />
+        <table border="1" cellspacing=0 cellpadding=5>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Mã hàng hoá</th>
+                    <th>Tên hàng hoá</th>
+                    <th>Danh mục</th>
+                    <th>Giá nhập</th>
+                    <th>Giá bán</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>1</td>
+                    <td>SP01</td>
+                    <td>Iphone 13</td>
+                    <td rowspan="3">Iphone</td>
+                    <td>10000</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>SP02</td>
+                    <td>Iphone 14</td>
+                    <!-- <td>Iphone</td> -->
+                    <td>12000</td>
+                    <td>14000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SP03</td>
+                    <td>Iphone 15</td>
+                    <!-- <td>Iphone</td> -->
+                    <td>14000</td>
+                    <td>16000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>SP04</td>
+                    <td>Xiaomi A</td>
+                    <td rowspan="2">Xiaomi</td>
+                    <td rowspan="2">5000</td>
+                    <td>7000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>SP05</td>
+                    <td>Xiaomi B</td>
+                    <!-- <td>Xiaomi</td> -->
+                    <!-- <td>5000</td> -->
+                    <td rowspan="2">6500</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>SP06</td>
+                    <td>Samsung A20</td>
+                    <td>Samsung</td>
+                    <td>6000</td>
+                    <!-- <td>6500</td> -->
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>SP07</td>
+                    <td>Samsung Note20 Ultra</td>
+                    <td rowspan="2">Samsung</td>
+                    <td colspan="2" rowspan="2">12000</td>
+                    <!-- <td>14000</td> -->
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>SP08</td>
+                    <td>Samsung S20 Ultra</td>
+                    <!-- <td>Samsung</td> -->
+                    <!-- <td>14000</td>
+                    <td>16000</td> -->
+                </tr>
+            </tbody>
+            <tfoot align="center">
+                <tr>
+                    <td colspan="4">Tổng tiền</td>
+                    <td>73000</td>
+                    <td>75000</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
