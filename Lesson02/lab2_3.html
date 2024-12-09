@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <form action method="post" enctype="multipart/form-data">
+
+            <table width="480" align="center">
+                <thead>
+                    <tr>
+                        <th colspan="2" align="center">Đăng ký thành viên</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="150">Họ tên</td>
+                        <td>
+                            <input size="25" type="text" name="name" id="name" value>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Tên đăng nhập</td>
+                        <td>
+                            <input size="25" type="text" name="username" id="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Mật khẩu</td>
+                        <td>
+                            <input size="25" type="password" name="password"
+                                id="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Ảnh đại diện</td>
+                        <td>
+                            <input size="25" type="file" name="avatar" id="avatar">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Giới tính</td>
+                        <td>
+                            <input size="25" type="radio" name="gender" id="female">
+                            <label for="female">Nam</label>
+                            <input size="25" type="radio" name="gender" id="male">
+                            <label for="male">Nữ</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Sở thích</td>
+                        <td>
+                            <input size="25" type="checkbox" name="hobby" id="bong_da">
+                            <label for="bong_da">Bóng đá</label>
+                            <input size="25" type="checkbox" name="hobby" id="xem_phim">
+                            <label for="xem_phim">Xem phim</label><br>
+                            <input size="25" type="checkbox" name="hobby" id="du_lich">
+                            <label for="du_lich">Du lịch</label>
+                            <input size="25" type="checkbox" name="hobby" id="boi">
+                            <label for="boi">Bơi</label>
+                            <input size="25" type="checkbox" name="hobby" id="nghe_nhac">
+                            <label for="nghe_nhac">Nghe nhạc</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Quê quán</td>
+
+                        <td>
+                            <select name="que_quan" id="que_quan" >
+                                <option align="center" value="">---Chọn tỉnh---</option>
+                                <option align="center" value="HN">Hà Nội</option>
+                                <option align="center" value="HP">Hải Phòng</option>
+                                <option align="center" value="HD">Hải Dương</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">
+                            Địa chỉ
+                        </td>
+                        <td>
+                            <input size="25" type="text" name="adress" id="adress">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Điện thoại</td>
+                        <td>
+                            <input size="25" type="text" name="phone" id="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150">Mô tả ngắn</td>
+                        <td>
+                            <textarea name="mo_ta" id="mo_ta" cols="40" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="150" colspan="2" align="center">
+                            <input size="25" type="submit" name="submit" id="submit" value="Đăng ký">
+                            <input size="25" type="reset" name="reset" id="reset" value="Làm lại">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

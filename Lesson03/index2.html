@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Các bộ chọn CSS</title>
+        <style>
+        /* Bộ chọn * - chọn tất cả các thành phần HTML */
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Tag - có thể các id, class, tên thẻ, tên thuộc tính 
+        - chọn tất các thẻ cùng loại
+        */
+        /* Tag01 tag02: tất cả các thẻ tag02 nằm 
+        trong tag01 thì đều nhận thuộc tính css */
+        div p{ 
+            /* tất cả thẻ p nằm trong thẻ div đều nhận thuộc 
+            tính color là màu xanh */
+           color: rgb(69, 1, 240); 
+        }
+
+          /* Tag01,tag02: tất cả các thẻ tag01 và tag02 
+          đều có thuộc tính cùng loại */
+        /* h2{
+            color: red;
+        }   
+        h3{
+            color: red;
+        } */
+         h2,h3{
+            color: red;
+         }
+         
+         /* tag01+tag02:tất cả các thẻ tag02 liền sau tag01
+        */
+        h2+p{
+            background-color: yellow;
+        }
+
+        /* tag01>tag02:tất cả các thẻ tag02 nằm 
+        trong tag01 thì đều nhận thuộc tính css nhưng thẻ con
+        hoặc hiểu cách khác
+            tất cả các thẻ tag02 là thẻ con của thẻ tag01
+        */
+        section>p{
+            background-color: yellow;
+        }
+
+
+    </style>
+    </head>
+    <body>
+        <!-- tag01 tag02 -->
+        <div>
+            <p>
+                Tag01 Tag01 (div p)
+               
+            </p>
+            <nav>
+                <p>
+                    Tag01 Tag01 (div p)
+                </p>
+            </nav>
+        </div>
+        <!-- Tag01, tag02 -->
+        <div>
+            <h2>Tag01, Tag02</h2>
+            <h3>Tag01, Tag02</h3>
+        </div>
+
+        <!-- Tag01+Tag02 -->
+        <div>
+            <h2>Tag01+Tag02</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis cum mollitia deleniti, ullam veritatis voluptatibus
+                corrupti enim eos quidem fuga explicabo officiis amet nostrum
+                optio, id a temporibus aliquid culpa.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis cum mollitia deleniti, ullam veritatis voluptatibus
+                corrupti enim eos quidem fuga explicabo officiis amet nostrum
+                optio, id a temporibus aliquid culpa.</p>
+        </div>
+
+        <!-- Tag01>Tag02 -->
+        <section>
+            <h4>Tag01>Tag02</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
+                illum quia exercitationem earum ipsam voluptatem laboriosam,
+                quis nisi delectus fuga, amet facere, mollitia debitis eveniet
+                aut sequi quidem rem fugiat?
+            </p>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Vitae mollitia itaque enim omnis, deleniti, non fuga,
+                    asperiores dicta dolores veniam inventore! Quos labore ipsam
+                    veritatis quas aperiam quasi odio. Quam?
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

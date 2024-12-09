@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mức độ Ưu tiên trong CSS</title>
+        <style>
+            /* #red{
+                color: red;
+            }
+            .cl-blue{
+                color: blue ;
+            } */
+            section div p{
+                color: red;
+             }
+
+            section p{
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 
+        Lưu ý:
+        1. CSS sẽ lấy từ dưới lên trên hay sẽ ăn theo css được viết sau
+        2. !important -> tương tác qua id -> tương tác qua thuộc tính 
+            -> tương tác qua class -> tương tác qua tên thẻ
+        3. Chỏ càng kỹ/gần thì sẽ càng được ưu tiên (các nhiều bộ chọn)
+
+     -->
+
+        <section>
+            <div>
+                <p id="red" class="cl-blue">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Distinctio, modi quam ullam quas deserunt ducimus animi
+                    quaerat pariatur sint labore nobis enim? Aliquid nisi iusto
+                    neque ad aperiam iste consequatur.
+                </p>
+            </div>
+        </section>
+    </body>
+</html>
