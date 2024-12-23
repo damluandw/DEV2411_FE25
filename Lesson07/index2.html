@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng nhập</title>
+        <style>
+            .error{
+                color: red;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" enctype="multipart/form-data" method="post">
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" onblur="userNameBlank()">
+                <p class="error" id="error-user">
+                    Username không được để trống
+                </p>
+                <p class="error" id="error-email-user">
+                    Username không đúng định dạng
+                </p>
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" onblur="passwordBlank()">
+                <p class="error" id="error-pass">
+                    Password không được để trống
+                </p>
+                <p class="error" >
+                    Password trên 6 ký tự
+                </p>
+            </div>
+            <div class="form-control" onclick="showPass()">
+                <input type="checkbox" name="showPass" id="showPass" >
+                <label for="showPass" >Hiển thị mật khẩu</label>
+            </div>
+            <div class="form-control">
+                <input type="submit" name="submit" id="submit">
+            </div>
+        </form>
+
+        <script>
+            var regxEmail =/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+            var regxPass = /"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/
+            function userNameBlank(){
+                var checkBlank = document.getElementById("username").value;
+                var username = document.getElementById("username")
+                if(checkBlank == ""){
+                    document.getElementById("error-user").style.display = 'block';
+                    document.getElementById("error-email-user").style.display = 'none';
+                }else{
+                    document.getElementById("error-user").style.display = 'none';
+                    // if(regxEmail.test(checkBlank)){
+                    //     document.getElementById("error-email-user").style.display = 'none';
+                    // }else{
+                    //     document.getElementById("error-email-user").style.display = 'block';
+                    // }
+                    // checkRegx(regxEmail, checkBlank,0)
+                    checkRegx2("username", regxEmail, checkBlank)
+                }
+            }
+            function passwordBlank(){
+                var checkBlank = document.getElementById("password").value;
+                if(checkBlank == ""){
+                    document.getElementById("error-pass").style.display = 'block';
+                }else{
+                    document.getElementById("error-pass").style.display = 'none';
+                    // checkRegx(regxPass, checkBlank,1)
+                    checkRegx2("password", regxPass, checkBlank)
+                }
+            }
+          
+            function showPass(){
+                var checkShowPass = document.getElementById("showPass");
+                console.log(checkShowPass.checked)
+                if(checkShowPass.checked){
+                    document.getElementById("password").type = "text"
+                }else{
+                    document.getElementById("password").type = "password"
+                }
+            }
+
+            function checkRegx(checkRegx, str,index){
+                console.log(checkRegx,str,index)
+                if(checkRegx.test(str)){
+                        document.querySelectorAll("p + p")[index].style.display = 'none';
+                    }else{
+                        document.querySelectorAll("p + p")[index].style.display = 'block';
+                    }
+            }
+
+            function checkRegx2(id, checkRegx, str){
+                console.log(checkRegx,str)
+                var text = "#"+ id + " + p + p";
+                // console.log(text);
+                if(checkRegx.test(str)){
+                        document.querySelector(text).style.display = 'none';
+                    }else{
+                        document.querySelector(text).style.display = 'block';
+                    }
+            }
+        </script>
+    </body>
+</html>
