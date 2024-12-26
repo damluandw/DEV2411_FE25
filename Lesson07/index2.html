@@ -15,7 +15,7 @@
         <form action="" enctype="multipart/form-data" method="post">
             <div class="form-control">
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username" onblur="userNameBlank()">
+                <input type="text" name="username" id="username" onblur="check('username')">
                 <p class="error" id="error-user">
                     Username không được để trống
                 </p>
@@ -25,12 +25,12 @@
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" onblur="passwordBlank()">
+                <input type="password" name="password" id="password" onblur="check('password')">
                 <p class="error" id="error-pass">
                     Password không được để trống
                 </p>
                 <p class="error" >
-                    Password trên 6 ký tự
+                    Password Tối thiểu tám ký tự, ít nhất một chữ cái viết hoa, một chữ cái viết thường và một số
                 </p>
             </div>
             <div class="form-control" onclick="showPass()">
@@ -45,37 +45,50 @@
         <script>
             var regxEmail =/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
             var regxPass = /"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/
-            function userNameBlank(){
-                var checkBlank = document.getElementById("username").value;
-                var username = document.getElementById("username")
-                if(checkBlank == ""){
-                    document.getElementById("error-user").style.display = 'block';
-                    document.getElementById("error-email-user").style.display = 'none';
-                }else{
-                    document.getElementById("error-user").style.display = 'none';
-                    // if(regxEmail.test(checkBlank)){
-                    //     document.getElementById("error-email-user").style.display = 'none';
-                    // }else{
-                    //     document.getElementById("error-email-user").style.display = 'block';
-                    // }
-                    // checkRegx(regxEmail, checkBlank,0)
-                    checkRegx2("username", regxEmail, checkBlank)
-                }
+            // function userNameBlank(){
+            //     var checkBlank = document.getElementById("username").value;
+            //     var username = document.getElementById("username")
+            //     if(checkBlank == ""){
+            //         document.getElementById("error-user").style.display = 'block';
+            //         document.getElementById("error-email-user").style.display = 'none';
+            //     }else{
+            //         document.getElementById("error-user").style.display = 'none';
+            //         // if(regxEmail.test(checkBlank)){
+            //         //     document.getElementById("error-email-user").style.display = 'none';
+            //         // }else{
+            //         //     document.getElementById("error-email-user").style.display = 'block';
+            //         // }
+            //         // checkRegx(regxEmail, checkBlank,0)
+            //         checkRegx2("username", regxEmail, checkBlank)
+            //     }
+            // }
+
+            // function passwordBlank(){
+            //     var checkBlank = document.getElementById("password").value;
+            //     if(checkBlank == ""){
+            //         document.getElementById("error-pass").style.display = 'block';
+            //     }else{
+            //         document.getElementById("error-pass").style.display = 'none';
+            //         // checkRegx(regxPass, checkBlank,1)
+            //         checkRegx2("password", regxPass, checkBlank)
+            //     }
+            // }
+            // function checkRegx(checkRegx, str,index){
+            //     console.log(checkRegx,str,index)
+            //     if(checkRegx.test(str)){
+            //             document.querySelectorAll("p + p")[index].style.display = 'none';
+            //         }else{
+            //             document.querySelectorAll("p + p")[index].style.display = 'block';
+            //         }
+            // }
+            regx = {
+               username: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+               password: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[_@$!%*#?&])[A-Za-z\d_@$!%*#?&]{8,}$/
             }
-            function passwordBlank(){
-                var checkBlank = document.getElementById("password").value;
-                if(checkBlank == ""){
-                    document.getElementById("error-pass").style.display = 'block';
-                }else{
-                    document.getElementById("error-pass").style.display = 'none';
-                    // checkRegx(regxPass, checkBlank,1)
-                    checkRegx2("password", regxPass, checkBlank)
-                }
-            }
-          
+
             function showPass(){
                 var checkShowPass = document.getElementById("showPass");
-                console.log(checkShowPass.checked)
+                // console.log(checkShowPass.checked)
                 if(checkShowPass.checked){
                     document.getElementById("password").type = "text"
                 }else{
@@ -83,18 +96,30 @@
                 }
             }
 
-            function checkRegx(checkRegx, str,index){
-                console.log(checkRegx,str,index)
-                if(checkRegx.test(str)){
-                        document.querySelectorAll("p + p")[index].style.display = 'none';
-                    }else{
-                        document.querySelectorAll("p + p")[index].style.display = 'block';
-                    }
-            }
+           function check(id){
+                var checkBlank = document.getElementById(id).value;
+                let p1 = "#" +id + "+ p" // #username + p
+                let p2 = "#" +id + "+ p + p"  // #username + p + p
+                if(checkBlank == ""){
+                    
+                    document.querySelector(p1).style.display = 'block';
+                    document.querySelector(p2).style.display = 'none';
+                }else{
+                    document.querySelector(p1).style.display = 'none';
+                    // if(regxEmail.test(checkBlank)){
+                    //     document.getElementById("error-email-user").style.display = 'none';
+                    // }else{
+                    //     document.getElementById("error-email-user").style.display = 'block';
+                    // }
+                    // checkRegx(regxEmail, checkBlank,0)
+                    
+                    checkRegx2(p2, regx[id], checkBlank);
+                }
+           }
 
-            function checkRegx2(id, checkRegx, str){
-                console.log(checkRegx,str)
-                var text = "#"+ id + " + p + p";
+            function checkRegx2(text, checkRegx, str){
+                console.log(checkRegx.test(str))
+                // var text = "#"+ id + " + p + p"; // #username + p + p  or  #password + p + p 
                 // console.log(text);
                 if(checkRegx.test(str)){
                         document.querySelector(text).style.display = 'none';
