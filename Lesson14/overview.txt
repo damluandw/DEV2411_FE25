@@ -1,0 +1,90 @@
+1. HTML - khung trang
+- theo cú pháp thì có 2 loại thẻ: thẻ đơn, và thẻ kép
+- 1 số thuộc tính của thẻ HTML
+- Một số thẻ thông dụng: 
+    + table, thead, tbody, tfooter, tr, th, td
+    + form, input, select, option, textera, lable...
+    + header, section, footer, nav, div,p,...
+    + lable, span, b,a,s,u,i,...
+    + h1, h2, h3, h4, h5, h6,...
+2. CSS - trang trí cho trang
+- 3 cách để sử dụng CSS
+    + inline - viết vào thẻ HTML - style ngay trên thẻ HTML
+    + internal - viết vào file HTML  - sử dụng thẻ style
+    + external - viết vào file mở rộng  .css - sử dụng thẻ link để liên kết tới file .css
+- Các các tương tác với thẻ HTML
+    + tương tác thông qua tên thẻ HTML - VD:  div, h2,...
+    + tương tác thông qua tên class của thẻ HTML : VD: .tên_class
+    + tương tác thông qua thuộc tính của thẻ HTML: VD: [tên_thuộc_tính = "thuộc_tính"]
+    + tương tác thông qua id của thẻ HTML - VD: #tên_id
+- Bộ chọn CSS
+    + tag01: chọn tất cả các phần tử trong tag01
+    + tag01>tag02 : chọn tất cả thẻ tag02 là thẻ con của thẻ tag01
+    + tag01 tag02 : chọn tất cả thẻ tag02 là nằm trong của thẻ tag01
+    + tag01,tag02 : chọn tất cả thẻ tag01 hoặc tag02
+    + tag01+tag02 : chọn tất cả các thẻ tag02 nằm sau tag01
+    + tag01: before/after  - thêm thẻ mở rộng của tag01 vào trước hoặc sau và đi kèm với thuộc tính content : ''
+    + tag01: hover - khi hover vào thẻ tag01 thì tag01 sẽ đc css
+    + tag01: hover tag02 - khi hover vào thẻ tag01 thì tag02 sẽ đc css
+    +....
+- Mức độ ưu tiên CSS
+    + CSS viết sau thì sẽ được sử dụng
+    + !important -> id -> thuộc tính -> class -> tên thẻ
+    + trỏ càng gần/chi tiết đến thẻ HTML thì CSS càng được ưu tiên
+- Một số thuộc tính CSS
+    + display : none/block, inline, flex, float
+    + color : tên_màu/hex/ rgb
+    + background: 
+    + border
+    + border-radius
+    + margin/padding
+    + postition: relative/absolute/ fix
+    + text
+    + font
+    + width/ height
+    +.....
+- Đơn vị: px, rem, em, %,....
+
+- Responesive - @media
+
+3. Javascript - làm trang động
+-  Biến, mảng, object,... 
+     + var/let tên_biến/tên_mảng/tên_object 
+     + constant tên_hằng
+- Gán giá trị: =, +=,-=,/=,*=
+- So sánh:  ==,>,<,>=,<=, ===, !=
+- Điều kiện: if else / switch case
+- Vòng lặp: for, while, do while, for in
+- Hàm: funtion - khai báo và sử dụng
+    + Khai báo: funtion tên_funtion( tên_tham_số_1,.... ){ }
+    + sử dụng:  tên_funtion( tham_số_1,.... )
+
+- 3 cách để sử dụng JS
+    + inline - viết vào thẻ HTML - JS ngay trên thẻ HTML
+    + internal - viết vào file HTML  - sử dụng thẻ script
+    + external - viết vào file mở rộng  .js - sử dụng thẻ script để liên kết tới file .js
+
+4. DOM/ Jquery - tương tác với thẻ HTML
+    * DOM - document
+        - Tương tác thông qua tên thẻ HTML : document.getByTagName('tên_thẻ')
+        - Tương tác thông qua tên class : document.getByClassName('tên_thẻ')
+        - Tương tác thông qua tên Id : document.getById('tên_thẻ')
+        - Tương tác thông qua cú pháp CSS Seclector: document.querySelectorAll('Cú_pháp_CSS_selector')
+    * Jquery - $()
+        - Tương tác thông qua cú pháp CSS Seclector: $('Cú_pháp_CSS_selector')
+
+- Event: click, dbclick, blur, onchange,... 
+- Thay thế CSS/ HTML: 
+        + DOM: innerHTML, style,...
+        + Jquery:  HTML(), append(), css(), parent(), sibling(), chilren(),...
+5. Bootstrap - Thư viện để CSS dễ hơn và nhanh hơn
+- thuộc class của Bootstrap - hiểu quy tắc đặt tên của Bootstrap
+- copy các template trên trang getbootstrap
+=> Ghi đè CSS
+
+6. Slick - slide item
+7. Fontasome - icon
+8. Photoshop - đo kích thước, lấy mã màu, cắt ảnh, font
+9. Regular Exception - Check thông tin input
+var tên_regular = //
+tên_regular.test("")

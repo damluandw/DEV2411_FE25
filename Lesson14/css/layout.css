@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gotham-Medium";
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1280px;
+}
+
+.cl-1 {
+    color: #2c2e53;
+}
+
+.cl-2 {
+    color: #bd945f;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.cl-3 {
+    color: #f3f3f3;
+}
+
+.bg-1 {
+    background-color: #2c2e53;
+}
+
+.bg-2 {
+    background-color: #bd945f;
+}
+
+.bg-3 {
+    background-color: #f3f3f3;
+}
+
+/* Hedear */
+header {
+    padding: 1.375rem 0;
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+}
+
+.header-nav .nav>a {
+    position: relative;
+    padding: 0.5rem 1.6875rem;
+}
+
+.header-nav .nav>a::before,
+.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1.687rem;
+    width: 44%;
+    height: 0.375rem;
+    background-color: #bd945f;
+    display: none;
+}
+
+.header-nav .nav>a:hover::before,
+.active::after {
+    display: block;
+}
+
+/* Hedear-mobile */
+#menu-mobile>.nav {
+    /* display: none; */
+    display: none;
+}
+
+
+@media (max-width: 575.98px) {
+    .header-logo {
+        width: 2rem;
+    }
+
+    .menu-mobile-active {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        height: 100vh;
+    }
+
+    #menu-mobile>.nav a {
+        text-align: center;
+    }
+
+    #menu-mobile .nav>a {
+        position: relative;
+        padding: 0.5rem 1.6875rem;
+    }
+    
+    #menu-mobile .nav>a::before,
+    .active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 20%;
+        height: 0.375rem;
+        background-color: #bd945f;
+        display: none;
+        transform: translateX(-50%);
+    }
+    
+    #menu-mobile .nav>a:hover::before,
+    .active::after {
+        display: block;
+    }
+}
+
+/* Hedear-mobile */
+/* Hedear */
+
+/* Banner */
+#banner {
+    margin-top: 4rem;
+    background-image: url("../imgs/banner.jpg");
+    height: 51.625rem;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner .container {
+    position: relative;
+}
+
+#banner .banner-content {
+    position: absolute;
+    left: 3.375rem;
+    top: 16.25rem;
+}
+
+
+.banner-content h2,
+.banner-content h2>span {
+    text-transform: uppercase;
+    font-size: 2.9rem;
+    font-family: "Gotham-Ultra";
+}
+
+.banner-content p {
+    width: 34.75rem;
+    text-align: justify;
+}
+
+.banner-content button {
+    padding: 1.5rem 2rem;
+    border-radius: 0;
+    font-family: "Gotham-Ultra";
+    font-size: 1.25rem;
+    border: none;
+}
+
+/* Banner */
+/* Category */
+#categories {
+    height: 31.875rem;
+}
+
+#categories .item-category {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem 0 3.25rem 0;
+}
+
+#categories .item-category a {
+    font-family: "Gotham-Ultra";
+    text-decoration: none;
+    color: #2c2e53;
+}
+
+#categories>.container {
+    position: relative;
+}
+
+#categories>.container>div {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    z-index: 3;
+}
+
+/* Category */
+/* Product */
+#product-hot {}
+
+#product-hot .product-title h4 {
+    text-transform: uppercase;
+    font-family: "Gotham-Ultra";
+    text-decoration: none;
+    text-align: center;
+    color: #2c2e53;
+}
+
+#product-hot .product-title p {
+    text-align: center;
+    margin: 0.375rem 0 0 0;
+}
+
+.product-box {
+    width: 25%;
+}
+
+
+.product-box .product-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#list-product {
+    position: relative;
+}
+
+#list-product .slick-arrow {
+    border: 0;
+    border-radius: 50%;
+    background-color: #bd945f;
+    color: #fff;
+    width: 2.875rem;
+    height: 2.875rem;
+    font-size: 2rem;
+    position: absolute;
+    top: 30%;
+}
+
+#list-product .slick-prev {
+    right: calc(100% - 10px);
+}
+
+#list-product .slick-next {
+    left: calc(100% - 10px);
+}
+
+/* Product */
+
+.product-box {
+    width: 23%;
+}
